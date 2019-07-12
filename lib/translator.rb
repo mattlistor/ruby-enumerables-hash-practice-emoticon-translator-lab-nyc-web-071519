@@ -1,11 +1,12 @@
 require 'yaml'
 
 def load_library(path)
+  # "The first step will be to load the YAML file in the lib/ folder"
   emoticons_array = YAML.load_file(path)
   emoticon_hash = {}
-
-  emoticon_hash["get_emoticon"] = Hash.new
-  emoticon_hash["get_meaning"] = Hash.new
+  
+  emoticon_hash["get_emoticon"] = {}
+  emoticon_hash["get_meaning"] = {}
 
   emoticons_array.each do |english_word, emoticon_set|
     emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
