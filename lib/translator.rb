@@ -11,11 +11,12 @@ def load_library(path)
 
   #Filling out the keys' empty hashes
   emoticons_array.each do |english, array|
-    #'array.first' is english while 'array.last' is japanese emoticon
+    #'array[0]' is english while 'array[1]' is japanese emoticon
     emoticon_hash["get_emoticon"][array[0]] = array.last 
     emoticon_hash["get_meaning"][array[1]] = english
   end
-  emoticon_hash
+  
+  return emoticon_hash
 end
 
 def get_japanese_emoticon(path, emoticon)
@@ -24,7 +25,7 @@ def get_japanese_emoticon(path, emoticon)
   if result == nil
     result = "Sorry, that emoticon was not found" 
   end
-  result
+  return result
 end
 
 def get_english_meaning(path, emoticon)
@@ -33,5 +34,5 @@ def get_english_meaning(path, emoticon)
   if result == nil
     result = "Sorry, that emoticon was not found" 
   end
-  result
+  return result
 end
