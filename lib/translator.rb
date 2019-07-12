@@ -22,22 +22,22 @@ end
 def get_japanese_emoticon(path, emoticon)
   emot_hash = load_library(path)
   
-  #Checks if the emoticon is in the hash
-  result = emot_hash["get_emoticon"][emoticon]
-  if result == nil
-    result = "Sorry, that emoticon was not found" 
+  #Checks if the english emoticon is in the hash
+  translation = emot_hash["get_emoticon"][emoticon]
+  if translation == nil
+    translation = "Sorry, that emoticon was not found" 
   end
   
-  return result
+  return translation
 end
 
 def get_english_meaning(path, emoticon)
   emot_hash = load_library(path)
   
-  #Checks if the emoticon is in the hash
-  result = emot_hash["get_meaning"][emoticon]
-  if result == nil
-    result = "Sorry, that emoticon was not found" 
+  #Checks if the japanese emoticon is in the hash
+  translation = emot_hash["get_meaning"][emoticon]
+  if translation == nil
+    translation = "Sorry, that emoticon was not found" 
   end
-  return result
+  return translation
 end
