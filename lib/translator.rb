@@ -18,6 +18,10 @@ def load_library(path)
   
   return emot_hash
 end
+#-----------------------------------
+#1 Load
+#2 Checks if the emoticon in the paramter exists in the hash
+#3 Returns accordingly
 
 def get_japanese_emoticon(path, emoticon)
   emot_hash = load_library(path)
@@ -39,5 +43,6 @@ def get_english_meaning(path, emoticon)
   if translation == nil
     translation = "Sorry, that emoticon was not found" 
   end
+  
   return translation
 end
