@@ -18,10 +18,12 @@ def load_library(path)
   
   return emot_hash
 end
-#-----------------------------------
-#1 Load
+
+#-----------------------------------------------------------------
+#1 Load up the hash from load_library
 #2 Checks if the emoticon in the paramter exists in the hash
 #3 Returns accordingly
+#-----------------------------------------------------------------
 
 def get_japanese_emoticon(path, emoticon)
   emot_hash = load_library(path)
