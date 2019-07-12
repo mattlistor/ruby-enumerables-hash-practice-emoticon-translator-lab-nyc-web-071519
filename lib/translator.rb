@@ -5,6 +5,7 @@ def load_library(path)
   emoticons_array = YAML.load_file(path)
   emoticon_hash = {}
   
+  #Specifically mentions the names of these keys in the test
   emoticon_hash["get_emoticon"] = {}
   emoticon_hash["get_meaning"] = {}
 
